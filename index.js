@@ -24,6 +24,9 @@ app.use((req, res, next) => {
   next();
 });
 
+//AGREGAR BODY PARSER PARA LEER DATOS DEL FORMULARIO
+app.use(express.urlencoded({ extended: true }));
+
 // DEFINIR LA CARPETA PUBLICA
 app.use(express.static("public"));
 
